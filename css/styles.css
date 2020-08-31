@@ -1,0 +1,263 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+:root {
+  --expense-color: rgba(255, 0, 0, 0.904);
+  --income-color: #1db6a7;
+  --black-color: black;
+  --white-color: white;
+  --overlay-color:rgba(0, 0, 0, 0.5);
+  --description-values-colors:#e5e5e5 ;
+
+}
+
+/* SHOWCASE */
+#showcase {
+  background: url("../image/image1.jpg") no-repeat center center/cover;
+  z-index: -1;
+}
+
+/* OVERLAY */
+.overlay {
+  background:var(--overlay-color) ;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  right: 0;
+}
+
+#showcase,
+.overlay {
+  height: 25rem;
+}
+
+.main {
+  text-align: center;
+  max-width: 400px;
+  margin: 4.5rem auto 4.5rem auto;
+}
+
+.lead {
+  font-size: 1.3rem;
+}
+
+.figure {
+  font-size: 2.5rem;
+}
+
+#showcase,
+.expenses-percentage button {
+  color: var(--white-color);
+}
+
+.income-container,
+.expenses-container {
+  display: grid;
+  grid-template-columns: 6fr 6fr 1fr;
+  margin: 0.8rem;
+}
+
+.income,
+.income-amount,
+.income-empty {
+  background-color: var(--income-color);
+}
+
+.expenses,
+.expenses-amount,
+.expenses-percentage {
+  background-color: var(--expense-color);
+}
+
+.income,
+.expenses {
+  color: var(--black-color);
+}
+.expenses-percentage button {
+  border: none;
+  padding: 0 0.5rem;
+  background-color: var(--expense-color);
+}
+
+.income,
+.income-amount,
+.income-empty,
+.expenses,
+.expenses-amount,
+.expenses-percentage {
+  padding: 1rem 0 1rem 0;
+}
+
+.income,
+.expenses {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.income-amount,
+.expenses-amount,
+.expenses-percentage {
+  text-align: right;
+}
+
+/* DESCRIPTION AND VALUES */
+#description-and-value {
+  background-color: var(--description-values-colors);
+}
+
+#description-and-value{
+  padding: 1rem;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1fr;
+  margin: auto;
+  max-width: 950px;
+}
+
+.list{
+  text-align: right;
+  margin-right: 1rem;
+}
+
+select#select {
+  padding: 1.4rem 3rem 1.4rem 0;
+
+}
+
+
+option{
+  font-size: 1rem;
+}
+
+
+input[type="text"],
+.value input, .correct {
+  height: 4rem;
+}
+
+.value input,
+input[type="text"], select#select{
+  outline-color: var(--income-color);
+  border: 0;
+}
+
+input[type="text"],
+.value input {
+  border-color: var(--white-color);
+}
+
+
+.main-description,
+.value {
+  margin-right: 1rem;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+
+
+
+input[type="text"],
+.value input {
+  border-radius: 0.3rem;
+}
+
+
+input[type="text"], .value input{
+  text-indent: 1.5rem;
+  border: 0;
+}
+
+input::placeholder {
+  font-size: 1rem;
+  color: var(--black-color);
+}
+
+.value input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.value input {
+  width: 10rem;
+  font-size: 1.0rem;
+  color: var(--black-color);
+}
+
+.fa-check-circle {
+  color: var(--income-color);
+  font-size: 2.5rem;
+}
+
+.correct{
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+
+}
+
+
+/* MEDIA QUERY */
+@media(max-width: 640px) {
+  .description {
+  grid-template-columns: 1fr 1fr;
+}
+
+.list, input[type="text"], .value input, .correct{
+  display:flex;
+  justify-content:space-between;
+  margin: 0.7rem ;
+}
+
+.correct{
+  padding-left: 5rem;
+}
+
+select#select {
+  margin: auto 0 auto 2rem;
+}
+
+}
+
+
+
+
+
+
+/* MAIN INCOME AND EXPENSES */
+#income-and-expenses {
+  background: var(--white-color);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  margin: 4rem auto 15rem auto;
+  max-width: 1000px;
+}
+
+.main-income {
+  color: var(--income-color);
+}
+
+.main-expenses {
+  color: var(--expense-color);
+
+}
+
+/* MEDIA QUERY */
+@media(max-width:1111px){
+  #income-and-expenses {
+    padding-left: 2rem;
+}
+}
